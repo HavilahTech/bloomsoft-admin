@@ -114,7 +114,7 @@ const DashboardLayout = ({ children }) => {
           >
             {isSidebarOpen && (
               <h1 className="text-lg lg:text-xl font-bold text-brand whitespace-nowrap">
-                Foladel Admin
+                Blooms Admin
               </h1>
             )}
             <div

@@ -14,9 +14,9 @@ import { useToast } from "@/toast/ToastProvider";
 const SettingsPage = () => {
   const { user, userData } = useFirebase();
   const [companyInfo, setCompanyInfo] = useState({
-    name: "Foladel Fabrics",
-    email: "folakeomopo@gmail.com",
-    phone: "08138842139",
+    name: "Blooms Soft",
+    email: "blooomssoft@example.com",
+    phone: "0000000000000",
   });
 
   const [passwordData, setPasswordData] = useState({
