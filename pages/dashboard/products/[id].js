@@ -484,7 +484,7 @@ const EditProductPage = () => {
               <input
                 type="text"
                 name="name"
-                value={product.name}
+                value={product?.name}
                 onChange={handleChange}
                 required
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
@@ -499,7 +499,7 @@ const EditProductPage = () => {
               <input
                 type="text"
                 name="smallText"
-                value={product.smallText}
+                value={product?.smallText}
                 onChange={handleChange}
                 required
                 maxLength={20}
@@ -507,7 +507,7 @@ const EditProductPage = () => {
                 placeholder="Organic & Breathable"
               />
               <p className="text-xs text-gray-500 mt-1">
-                {product.smallText.length}/20 characters
+                {product?.smallText?.length}/20 characters
               </p>
             </div>
 
@@ -526,7 +526,7 @@ const EditProductPage = () => {
                 placeholder="Brief description (max 240 characters)"
               />
               <p className="text-xs text-gray-500 mt-1">
-                {product.description.length}/240 characters
+                {product?.description?.length}/240 characters
               </p>
             </div>
 
@@ -536,7 +536,7 @@ const EditProductPage = () => {
               </label>
               <textarea
                 name="detailedDescription"
-                value={product.detailedDescription}
+                value={product?.detailedDescription}
                 onChange={handleChange}
                 rows={4}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
