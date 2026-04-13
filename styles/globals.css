@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Fonts */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: "Playfair Display", serif;
+  --font-script: "Great Vibes", cursive;
+
+  /* Global Colors */
+  --color-brand: #E65424;
+}
+
+/* Add global utility classes */
+@layer utilities {
+  .bg-brand { background-color: var(--color-brand); }
+  .text-brand { color: var(--color-brand); }
+}
