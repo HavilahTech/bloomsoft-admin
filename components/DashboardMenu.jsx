@@ -15,6 +15,8 @@ import {
   ChevronLeft,
   Layers,
 } from "lucide-react";
+import { signOut } from "firebase/auth";
+import { auth } from "@/lib/firebaseConfig";
 
 const DashboardLayout = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -56,10 +58,20 @@ const DashboardLayout = ({ children }) => {
     },
   ];
 
-  const handleLogout = () => {
-    console.log("Logging out...");
-    // Add logout logic here
-    router.push("/");
+  const handleLogout = async () => {
+    try {
+
+      await signOut(auth);
+      router.push("/");
+      
+    } catch (error) {
+      console.error("Logout Error:", error);
+      addToast({
+        type: "error",
+        title: "Logout Failed",
+        message: "An error occurred while signing out. Please try again.",
+      });
+    }
   };
 
   const toggleSidebar = () => {
